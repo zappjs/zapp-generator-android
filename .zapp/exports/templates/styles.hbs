@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    {{#each styles}}
+    <style name="{{{@key}}}" parent="{{{parent}}}">
+        {{#each items}}
+        <item name="{{{@key}}}">{{{this}}}</item>
+        {{/each}}
+    </style>
+    {{/each}}
+</resources>

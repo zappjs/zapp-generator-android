@@ -1,0 +1,5 @@
+filename: app/src/main/res/values/styles.xml
+engine: handlebars
+template: styles
+mapping:
+  styles: /resources/styles

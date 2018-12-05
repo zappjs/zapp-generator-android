@@ -1,0 +1,15 @@
+manifest:
+  allowBackup: 'true'
+  label: '@string/app_name'
+  supportsRtl: 'true'
+  theme: '@style/AppTheme'
+  activity:
+    name: .MainActivity
+    label: '@string/app_name'
+    intentFilters:
+      main:
+        name: android.intent.action.MAIN
+        type: action
+      launcher:
+        name: android.intent.category.LAUNCHER
+        type: category

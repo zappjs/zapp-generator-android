@@ -1,0 +1,5 @@
+filename: app/src/main/res/values/colors.xml
+engine: handlebars
+template: colors
+mapping:
+  colors: /resources/colors

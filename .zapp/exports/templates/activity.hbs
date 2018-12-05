@@ -1,0 +1,54 @@
+package com.example.ctate.helloworld;
+
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
+{{#each layout.views}}
+import android.widget.{{{type}}};
+{{/each}}
+
+public class MainActivity extends AppCompatActivity {
+
+    {{#each layout.views}}
+    private {{{type}}} {{{@key}}}{{{type}}};
+    {{/each}}
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.navigation_featured:
+                    messageTextView.setText(R.string.title_featured);
+                    return true;
+                case R.id.navigation_browse:
+                    messageTextView.setText(R.string.title_browse);
+                    return true;
+                case R.id.navigation_search:
+                    messageTextView.setText(R.string.title_search);
+                    return true;
+                case R.id.navigation_cart:
+                    messageTextView.setText(R.string.title_cart);
+                    return true;
+            }
+            return false;
+        }
+
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        {{#each layout.views}}
+        {{{@key}}}{{{type}}} = ({{{type}}}) findViewById(R.id.{{{@key}}});
+        {{/each}}
+
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+
+}

@@ -1,0 +1,5 @@
+filename: app/src/main/res/values/dimens.xml
+engine: handlebars
+template: dimens
+mapping:
+  dimens: /resources/dimens

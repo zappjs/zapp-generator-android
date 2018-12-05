@@ -1,0 +1,42 @@
+main:
+  context: .MainActivity
+  layout:
+    width: match_parent
+    height: match_parent
+  type: activity
+  views:
+    message:
+      type: TextView
+      layout:
+        width: wrap_content
+        height: wrap_content
+        marginLeft: '@dimen/activity_horizontal_margin'
+        marginStart: '@dimen/activity_horizontal_margin'
+        marginTop: '@dimen/activity_vertical_margin'
+      text: '@string/title_featured'
+      constraints:
+        left:
+          position: left
+          view: parent
+        top:
+          position: top
+          view: parent
+    navigation:
+      type: android.support.design.widget.BottomNavigationView
+      layout:
+        width: 0dp
+        height: wrap_content
+        marginEnd: 0dp
+        marginStart: 0dp
+      background: '?android:attr/windowBackground'
+      menu: '@menu/navigation'
+      constraints:
+        bottom:
+          position: bottom
+          view: parent
+        left:
+          position: left
+          view: parent
+        right:
+          position: right
+          view: parent

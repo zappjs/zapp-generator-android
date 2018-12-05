@@ -1,0 +1,14 @@
+navigation:
+  items:
+    featured:
+      icon: '@drawable/ic_home_black_24dp'
+      title: '@string/title_featured'
+    browse:
+      icon: '@drawable/ic_dashboard_black_24dp'
+      title: '@string/title_browse'
+    search:
+      icon: '@drawable/ic_notifications_black_24dp'
+      title: '@string/title_search'
+    cart:
+      icon: '@drawable/ic_dashboard_black_24dp'
+      title: '@string/title_cart'

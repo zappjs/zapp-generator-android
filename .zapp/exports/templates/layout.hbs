@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    {{#if layout.width}}
+    android:layout_width="{{{layout.width}}}"
+    {{/if}}
+    {{#if layout.height}}
+    android:layout_height="{{{layout.height}}}"
+    {{/if}}
+    {{#if context}}
+    tools:context="{{{context}}}"
+    {{/if}}
+>
+    {{#each views}}
+
+    <{{{type}}}
+        android:id="@+id/{{{@key}}}"
+        {{#if layout.width}}
+        android:layout_width="{{{layout.width}}}"
+        {{/if}}
+        {{#if layout.height}}
+        android:layout_height="{{{layout.height}}}"
+        {{/if}}
+        {{#if layout.marginTop}}
+        android:layout_marginTop="{{{layout.marginTop}}}"
+        {{/if}}
+        {{#if layout.marginBottom}}
+        android:layout_marginBottom="{{{layout.marginBottom}}}"
+        {{/if}}
+        {{#if layout.marginLeft}}
+        android:layout_marginLeft="{{{layout.marginLeft}}}"
+        {{/if}}
+        {{#if layout.marginRight}}
+        android:layout_marginRight="{{{layout.marginRight}}}"
+        {{/if}}
+        {{#if layout.marginStart}}
+        android:layout_marginStart="{{{layout.marginStart}}}"
+        {{/if}}
+        {{#if layout.marginEnd}}
+        android:layout_marginEnd="{{{layout.marginEnd}}}"
+        {{/if}}
+        {{#if text}}
+        android:text="{{{text}}}"
+        {{/if}}
+        {{#if menu}}
+        app:menu="{{{menu}}}"
+        {{/if}}
+        {{#each constraints}}
+        app:layout_constraint{{{case @key 'pascal'}}}_to{{{case position 'pascal'}}}Of="{{{view}}}"
+        {{/each}}
+    />
+    {{/each}}
+
+</android.support.constraint.ConstraintLayout>

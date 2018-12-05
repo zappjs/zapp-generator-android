@@ -1,0 +1,10 @@
+engine: handlebars
+filename:
+  engine: handlebars
+  template: app/src/main/java/com/example/ctate/helloworld/{{{case name 'pascal'}}}Activity.java
+  mapping:
+    name: '@key'
+template: activity
+iterator: activities
+mapping:
+  layout: ./layout

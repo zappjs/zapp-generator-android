@@ -1,0 +1,11 @@
+filename: app/src/main/AndroidManifest.xml
+engine: handlebars
+template: manifest
+mapping:
+  allowBackup: /app/manifest/allowBackup
+  icon: /app/manifest/icon
+  label: /app/manifest/label
+  roundIcon: /app/manifest/roundIcon
+  supportsRtl: /app/manifest/supportsRtl
+  theme: /app/manifest/theme
+  activity: /app/manifest/activity

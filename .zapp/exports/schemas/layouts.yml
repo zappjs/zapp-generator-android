@@ -1,0 +1,89 @@
+type: object
+additionalProperties:
+  type: object
+  properties:
+    type:
+      type: string
+      enum:
+        - activity
+    layout:
+      type: object
+      properties:
+        width:
+          type: string
+          enum:
+            - wrap_content
+            - match_parent
+        height:
+          type: string
+          enum:
+            - wrap_content
+            - match_parent
+        marginLeft:
+          type: string
+        marginStart:
+          type: string
+        marginTop:
+          type: string
+        marginEnd:
+          type: string
+    context:
+      type: string
+    views:
+      type: object
+      additionalProperties:
+        type: object
+        properties:
+          type:
+            type: string
+            enum:
+              - android.support.design.widget.BottomNavigationView
+              - TextView
+          layout:
+            type: object
+            properties:
+              width:
+                type: string
+                enum:
+                  - wrap_content
+              height:
+                type: string
+                enum:
+                  - wrap_content
+              marginLeft:
+                type: string
+              marginStart:
+                type: string
+              marginTop:
+                type: string
+              marginEnd:
+                type: string
+          text:
+            type: string
+          background:
+            type: string
+          menu:
+            type: string
+          constraints:
+            type: object
+            properties:
+              top:
+                type: object
+                properties:
+                  position:
+                    type: string
+                    enum:
+                      - top
+                      - right
+                      - left
+                      - bottom
+                  view:
+                    type: string
+                    enum:
+                      - parent
+              left: >-
+                /layouts/additionalProperties/properties/views/additionalProperties/properties/constraints/properties/top
+              right: >-
+                /layouts/additionalProperties/properties/views/additionalProperties/properties/constraints/properties/top
+              bottom: >-
+                /layouts/additionalProperties/properties/views/additionalProperties/properties/constraints/properties/top

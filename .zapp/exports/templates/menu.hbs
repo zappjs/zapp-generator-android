@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    {{#each items}}
+
+    <item
+        android:id="@+id/{{{../name}}}_{{{@key}}}"
+        {{#if icon}}
+        android:icon="{{{icon}}}"
+        {{/if}}
+        {{#if title}}
+        android:title="{{{title}}}" />
+        {{/if}}
+    {{/each}}
+
+</menu>

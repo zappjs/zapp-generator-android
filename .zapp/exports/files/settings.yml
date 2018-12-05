@@ -1,0 +1,3 @@
+filename: settings.gradle
+engine: handlebars
+template: gradleSettings

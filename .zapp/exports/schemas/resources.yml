@@ -1,0 +1,25 @@
+type: object
+properties:
+  colors:
+    type: object
+    additionalProperties:
+      type: string
+  dimens:
+    type: object
+    additionalProperties:
+      type: string
+  strings:
+    type: object
+    additionalProperties:
+      type: string
+  styles:
+    type: object
+    additionalProperties:
+      type: object
+      properties:
+        parent:
+          type: string
+        items:
+          type: object
+          additionalProperties:
+            type: string

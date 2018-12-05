@@ -1,0 +1,20 @@
+colors:
+  colorPrimary: '#3F51B5'
+  colorPrimaryDark: '#303F9F'
+  colorAccent: '#FF4081'
+dimens:
+  activity_horizontal_margin: 16dp
+  activity_vertical_margin: 16dp
+strings:
+  app_name: Hello World!
+  title_featured: Featured
+  title_browse: Browse
+  title_search: Search
+  title_cart: Cart
+styles:
+  AppTheme:
+    parent: Theme.AppCompat.Light.DarkActionBar
+    items:
+      colorPrimary: '@color/colorPrimary'
+      colorPrimaryDark: '@color/colorPrimaryDark'
+      colorAccent: '@color/colorAccent'

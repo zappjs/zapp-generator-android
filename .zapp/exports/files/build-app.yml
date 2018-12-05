@@ -1,0 +1,7 @@
+filename: app/build.gradle
+engine: handlebars
+template: build
+mapping:
+  compileSdkVersion: /android/compileSdkVersion
+  defaultConfig: /android/defaultConfig
+  buildTypes: /android/buildTypes

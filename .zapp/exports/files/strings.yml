@@ -1,0 +1,5 @@
+filename: app/src/main/res/values/strings.xml
+engine: handlebars
+template: strings
+mapping:
+  strings: /resources/strings

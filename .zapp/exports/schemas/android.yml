@@ -1,0 +1,24 @@
+type: object
+properties:
+  compileSdkVersion:
+    type: number
+  defaultConfig:
+    type: object
+    properties:
+      applicationId:
+        type: string
+      minSdkVersion:
+        type: number
+      targetSdkVersion:
+        type: number
+      versionCode:
+        type: number
+      versionName:
+        type: string
+  buildTypes:
+    type: object
+    additionalProperties:
+      type: object
+      properties:
+        minifyEnabled:
+          type: boolean

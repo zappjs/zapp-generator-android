@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ctate.helloworld">
+
+    <application
+        {{#if allowBackup}}
+        android:allowBackup="{{{allowBackup}}}"
+        {{/if}}
+        {{#if icon}}
+        android:icon="{{{icon}}}"
+        {{/if}}
+        {{#if label}}
+        android:label="{{{label}}}"
+        {{/if}}
+        {{#if roundIcon}}
+        android:roundIcon="{{{roundIcon}}}"
+        {{/if}}
+        {{#if supportsRtl}}
+        android:supportsRtl="{{{supportsRtl}}}"
+        {{/if}}
+        {{#if theme}}
+        android:theme="{{{theme}}}">
+        {{/if}}
+        {{#if activity}}
+        <activity
+            {{#if activity.name}}
+            android:name="{{{activity.name}}}"
+            {{/if}}
+            {{#if activity.label}}
+            android:label="@string/app_name">
+            {{/if}}
+            {{#if activity.intentFilters}}
+            <intent-filter>
+                {{#each activity.intentFilters}}
+                <{{{case type 'camel'}}} android:name="{{{name}}}" />
+                {{/each}}
+            </intent-filter>
+            {{/if}}
+        </activity>
+        {{/if}}
+    </application>
+
+</manifest>

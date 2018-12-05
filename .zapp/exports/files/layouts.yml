@@ -1,0 +1,13 @@
+engine: handlebars
+template: layout
+mapping:
+  layout: ./layout
+  context: ./context
+  views: ./views
+filename:
+  engine: handlebars
+  template: app/src/main/res/layout/{{{case type 'snake'}}}_{{{case name 'snake'}}}.xml
+  mapping:
+    name: '@key'
+    type: ./type
+iterator: layouts

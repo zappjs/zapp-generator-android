@@ -1,0 +1,11 @@
+engine: handlebars
+template: menu
+mapping:
+  name: '@key'
+  items: ./items
+filename:
+  engine: handlebars
+  template: 'app/src/main/res/menu/{{{case name ''snake''}}}.xml'
+  mapping:
+    name: '@key'
+iterator: menus
